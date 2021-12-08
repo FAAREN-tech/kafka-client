@@ -1,6 +1,0 @@
-{
-  "bootstrap": "benchmarks/bootstrap.php",
-  "extensions": [
-    "PhpBench\\Extensions\\XDebug\\XDebugExtension"
-  ]
-}
