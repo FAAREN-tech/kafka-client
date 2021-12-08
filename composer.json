@@ -1,0 +1,28 @@
+{
+    "name": "faaren-tech/kafka-client",
+    "description": "Simple Kafka Wrapper",
+    "type": "project",
+    "require": {
+        "jobcloud/php-kafka-lib": "~1.4",
+        "flix-tech/avro-serde-php": "~1.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FaarenTech\\KafkaClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "FAAREN",
+            "email": "daniel.wyschka@faaren.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FaarenTech\\KafkaClient\\KafkaClientServiceProvider"
+            ]
+        }
+    }
+}

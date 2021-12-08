@@ -1,0 +1,57 @@
+{
+  "name": "widmogrod/php-functional",
+  "description": "Functors, Applicative and Monads are fascinating concept. Purpose of this library is to explore them in OOP PHP world.",
+  "require": {
+    "php": "^7.1|^8.0",
+    "functional-php/fantasy-land": "^1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6",
+    "friendsofphp/php-cs-fixer": "^2",
+    "giorgiosironi/eris": "^0.9"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gabriel Habryn",
+      "email": "widmogrod@gmail.com"
+    }
+  ],
+  "prefer-stable": true,
+  "scripts": {
+    "test": "phpunit --no-coverage",
+    "testc": "phpunit --coverage-clover ./clover.xml",
+    "fix-code": "php-cs-fixer fix --allow-risky=yes",
+    "check-code": "php-cs-fixer fix --verbose --diff --dry-run --allow-risky=yes",
+    "xdebug": "php -d xdebug.profiler_enable=1 -d xdebug.profiler_output_dir=$(pwd) vendor/bin/phpunit --filter=test_generate_union_type"
+  },
+  "autoload": {
+    "psr-4": {
+      "Widmogrod\\": "./src"
+    },
+    "files": [
+      "src/Functional/array.php",
+      "src/Functional/functions.php",
+      "src/Functional/miscellaneous.php",
+      "src/Functional/listt.php",
+      "src/Functional/zipping.php",
+      "src/Functional/sublist.php",
+      "src/Functional/infinit.php",
+      "src/Functional/predicates.php",
+      "src/Functional/strings.php",
+      "src/Functional/monoid.php",
+      "src/Functional/setoid.php",
+      "src/Monad/Either/functions.php",
+      "src/Monad/Maybe/functions.php",
+      "src/Monad/Free/functions.php",
+      "src/Monad/IO/functions.php",
+      "src/Monad/IO/errors.php",
+      "src/Monad/Reader/functions.php",
+      "src/Monad/State/functions.php",
+      "src/Monad/Writer/functions.php",
+      "src/Monad/Control/Doo/actions.php",
+      "src/Monad/Control/Doo/interpretation.php",
+      "src/Useful/match.php"
+    ]
+  }
+}

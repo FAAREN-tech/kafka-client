@@ -1,0 +1,8 @@
+@namespace("example.avro")
+protocol `protocol` {
+    record User {
+        string name;
+        union{string, null} favorite_color;
+        array<int> favorite_numbers;
+    }
+}
