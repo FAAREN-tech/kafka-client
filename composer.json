@@ -24,5 +24,6 @@
                 "FaarenTech\\KafkaClient\\KafkaClientServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
