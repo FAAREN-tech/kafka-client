@@ -1,7 +1,7 @@
 {
     "name": "faaren-tech/kafka-client",
     "description": "Simple Kafka Wrapper",
-    "type": "project",
+    "type": "library",
     "require": {
         "jobcloud/php-kafka-lib": "~1.4",
         "flix-tech/avro-serde-php": "~1.4"
