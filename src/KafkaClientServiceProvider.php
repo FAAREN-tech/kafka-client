@@ -1,6 +1,7 @@
 <?php
 namespace FaarenTech\KafkaClient;
 
+use FaarenTech\KafkaClient\Consumer\Consumer;
 use FaarenTech\KafkaClient\Producer\Producer;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,6 +28,10 @@ class KafkaClientServiceProvider extends ServiceProvider
     {
         $this->app->bind('producer', function($app) {
            return new Producer(config('faaren-kafka'));
+        });
+
+        $this->app->bind('consumer', function($app) {
+            return new Consumer(config('faaren-kafka'));
         });
     }
 }

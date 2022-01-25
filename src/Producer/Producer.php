@@ -89,7 +89,7 @@ class Producer
     }
 
     public function message(string $key, array $body, array $headers, int $partition = 0): Producer {
-        $this->message = KafkaProducerMessage::create($this->topic, 0)
+        $this->message = KafkaProducerMessage::create($this->topic, $partition)
             ->withKey($key)
             ->withBody($body)
             ->withHeaders($headers);

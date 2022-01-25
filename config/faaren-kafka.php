@@ -31,4 +31,10 @@ return [
             'password' => env('FAA_KAFKA_REGISTRY_AUTH_PASSWORD', null)
         ]
     ],
+    /**
+     * Specific Settings for Kafka Consumer
+     */
+    'consumer' => [
+        'group-id' => env('FAA_KAFKA_CONSUMER_GROUP_ID', 'consumer')
+    ]
 ];
